@@ -867,7 +867,7 @@
         "kernel_options": "repo=$tree",
         "kernel_options_post": "",
         "boot_files": [],
-        "boot_loaders": []
+        "boot_loaders": {}
       },
       "cloudlinux6": {
         "signatures": [
@@ -3183,7 +3183,16 @@
         "kernel_arch": "(i386|amd64)",
         "kernel_arch_regex": null,
         "supported_arches":["i386","amd64"],
-        "boot_loaders":{"i386":["pxe","ipxe"], "x86_64":["pxe","ipxe"]},
+        "boot_loaders":{
+          "i386":[
+            "pxe",
+            "ipxe"
+          ],
+          "x86_64":[
+            "pxe",
+            "ipxe"
+          ]
+        },
         "supported_repo_breeds": [],
         "kernel_file": "pxeboot\\.n12",
         "initrd_file": "boot\\.sdi",
@@ -3205,7 +3214,16 @@
         "kernel_arch": "install\\.wim",
         "kernel_arch_regex": "^Architecture:.*(x86|x86_64)$",
         "supported_arches":["x86","x86_64"],
-        "boot_loaders":{"i386":["pxe","ipxe"], "x86_64":["pxe","ipxe"]},
+        "boot_loaders":{
+          "i386":[
+            "pxe",
+            "ipxe"
+          ],
+          "x86_64":[
+            "pxe",
+            "ipxe"
+          ]
+        },
         "supported_repo_breeds": [],
         "kernel_file": "pxeboot\\.n12",
         "initrd_file": "boot\\.sdi",
@@ -3224,7 +3242,12 @@
         "kernel_arch": "install\\.wim",
         "kernel_arch_regex": "^Architecture:.*(x86_64)$",
         "supported_arches":["x86_64"],
-        "boot_loaders":{"x86_64":["pxe","ipxe"]},
+        "boot_loaders":{
+          "x86_64":[
+            "pxe",
+            "ipxe"
+          ]
+        },
         "supported_repo_breeds": [],
         "kernel_file": "pxeboot\\.n12",
         "initrd_file": "boot\\.sdi",
@@ -3243,7 +3266,12 @@
         "kernel_arch": "install\\.wim",
         "kernel_arch_regex": "^Architecture:.*(x86_64)$",
         "supported_arches":["x86_64"],
-        "boot_loaders":{"x86_64":["pxe","ipxe"]},
+        "boot_loaders":{
+          "x86_64":[
+            "pxe",
+            "ipxe"
+          ]
+        },
         "supported_repo_breeds": [],
         "kernel_file": "pxeboot\\.n12",
         "initrd_file": "boot\\.sdi",
@@ -3262,7 +3290,12 @@
         "kernel_arch": "install\\.wim",
         "kernel_arch_regex": "^Architecture:.*(x86_64)$",
         "supported_arches":["x86_64"],
-        "boot_loaders":{"x86_64":["pxe","ipxe"]},
+        "boot_loaders":{
+          "x86_64":[
+            "pxe",
+            "ipxe"
+          ]
+        },
         "supported_repo_breeds": [],
         "kernel_file": "pxeboot\\.n12",
         "initrd_file": "boot\\.sdi",
@@ -3282,7 +3315,16 @@
         "kernel_arch": "(i386|amd64)",
         "kernel_arch_regex": null,
         "supported_arches":["i386","amd64"],
-        "boot_loaders":{"i386":["pxe","ipxe"], "x86_64":["pxe","ipxe"]},
+        "boot_loaders":{
+          "i386":[
+            "pxe",
+            "ipxe"
+          ],
+          "x86_64":[
+            "pxe",
+            "ipxe"
+          ]
+        },
         "supported_repo_breeds": [],
         "kernel_file": "pxeboot\\.n12",
         "initrd_file": "boot\\.sdi",
@@ -3304,7 +3346,16 @@
         "kernel_arch": "install\\.wim",
         "kernel_arch_regex": "^Architecture:.*(x86|x86_64)$",
         "supported_arches":["x86","x86_64"],
-        "boot_loaders":{"i386":["pxe","ipxe"], "x86_64":["pxe","ipxe"]},
+        "boot_loaders":{
+          "i386":[
+            "pxe",
+            "ipxe"
+          ],
+          "x86_64":[
+            "pxe",
+            "ipxe"
+          ]
+        },
         "supported_repo_breeds": [],
         "kernel_file": "pxeboot\\.n12",
         "initrd_file": "boot\\.sdi",
@@ -3323,7 +3374,16 @@
         "kernel_arch": "install\\.wim",
         "kernel_arch_regex": "^Architecture:.*(x86|x86_64)$",
         "supported_arches":["x86","x86_64"],
-        "boot_loaders":{"i386":["pxe","ipxe"], "x86_64":["pxe","ipxe"]},
+        "boot_loaders":{
+          "i386":[
+            "pxe",
+            "ipxe"
+          ],
+          "x86_64":[
+            "pxe",
+            "ipxe"
+          ]
+        },
         "supported_repo_breeds": [],
         "kernel_file": "pxeboot\\.n12",
         "initrd_file": "boot\\.sdi",
@@ -3342,7 +3402,16 @@
         "kernel_arch": "install\\.wim",
         "kernel_arch_regex": "^Architecture:.*(x86|x86_64)$",
         "supported_arches":["x86","x86_64"],
-        "boot_loaders":{"i386":["pxe","ipxe"], "x86_64":["pxe","ipxe"]},
+        "boot_loaders":{
+          "i386":[
+            "pxe",
+            "ipxe"
+          ],
+          "x86_64":[
+            "pxe",
+            "ipxe"
+          ]
+        },
         "supported_repo_breeds": [],
         "kernel_file": "pxeboot\\.n12",
         "initrd_file": "boot\\.sdi",
@@ -3361,7 +3430,13 @@
         "kernel_arch": "install\\.wim",
         "kernel_arch_regex": "^Architecture:.*(ARM64|x86_64)$",
         "supported_arches":["ARM64","x86_64"],
-        "boot_loaders":{"aarch64":[], "x86_64":["pxe","ipxe"]},
+        "boot_loaders":{
+          "aarch64":[],
+          "x86_64":[
+            "pxe",
+            "ipxe"
+          ]
+        },
         "supported_repo_breeds": [],
         "kernel_file": "pxeboot\\.n12",
         "initrd_file": "boot\\.sdi",
