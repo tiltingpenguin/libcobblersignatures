@@ -1,0 +1,104 @@
+{
+  "title": "distro-signatures",
+  "description": "the different distributions spupported by cobbler",
+  "type": "object",
+  "properties": {
+    "breeds": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "distro": {
+          "description": "",
+          "type": "object",
+          "properties": {
+            "os": {
+              "desciption": "",
+              "type": "object",
+              "properties": {
+                "signatures": {
+                  "description": "",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "version_file": {
+                  "description": "",
+                  "type": "string"
+                },
+                "version_file_regex": {
+                  "description": "",
+                  "type": "string"
+                },
+                "kernel_arch": {
+                  "description": "",
+                  "type": "string"
+                },
+                "kernel_arch_regex": {
+                  "description": "",
+                  "type": "string"
+                },
+                "supported_arches": {
+                  "description": "",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "supported_repo_breeds": {
+                  "description": "",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "kernel_file": {
+                  "description": "",
+                  "type": "string"
+                },
+                "initrd_file": {
+                  "description": "",
+                  "type": "string"
+                },
+                "isolinux_ok": {
+                  "description": "",
+                  "type": "boolean"
+                },
+                "default_autoinstall": {
+                  "description": "",
+                  "type": "string"
+                },
+                "kernel_options": {
+                  "description": "",
+                  "type": "string"
+                },
+                "kernel_options_post": {
+                  "description": "",
+                  "type": "string"
+                },
+                "boot_files": {
+                  "description": "",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "boot_loaders": {
+                  "description": "",
+                  "type": "object",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [ "breeds", "distro"]
+}
