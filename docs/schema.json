@@ -40,10 +40,19 @@
                 },
                 "supported_arches": {
                   "description": "",
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "enum": [
+                    "arm",
+                    "armhfp",
+                    "aarch64",
+                    "i386",
+                    "ia64",
+                    "ppc",
+                    "ppc64",
+                    "ppc64le",
+                    "s390",
+                    "s390x",
+                    "x86_64"
+                  ]
                 },
                 "supported_repo_breeds": {
                   "description": "",
@@ -90,10 +99,39 @@
                 "boot_loaders": {
                   "description": "",
                   "type": "object",
-                  "items": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
+                  "properties": {
+                    "arm": {
+                      "enum": ["pxe", "ipxe"]
+                    },
+                    "armhfp": {
+                      "enum": ["pxe", "ipxe"]
+                    },
+                    "aarch64": {
+                      "enum": ["pxe", "ipxe"]
+                    },
+                    "i386": {
+                      "enum": ["pxe", "ipxe"]
+                    },
+                    "ia64": {
+                      "enum": ["pxe", "ipxe"]
+                    },
+                    "ppc": {
+                      "enum": ["pxe", "ipxe"]
+                    },
+                    "ppc64": {
+                      "enum": ["pxe", "ipxe"]
+                    },
+                    "ppc64le": {
+                      "enum": ["pxe", "ipxe"]
+                    },
+                    "s390": {
+                      "enum": ["pxe", "ipxe"]
+                    },
+                    "s390x": {
+                      "enum": ["pxe", "ipxe"]
+                    },
+                    "x86_64": {
+                      "enum": ["pxe", "ipxe"]
                     }
                   }
                 }
