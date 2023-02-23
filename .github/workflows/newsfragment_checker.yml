@@ -1,10 +1,6 @@
 name: newsfragment_checker
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, pull_request, label]
 
 jobs:
   build:
@@ -12,19 +8,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetchdepth: 0
+          fetch-depth: 0
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.7'
+          cache: pip
+      - run: pip install .[changelog]
 
       - name: get added newsfragments
-        id: added_files
-        uses: tj-actions/changed-files@v35
-        with:
-          files: changelog.d/**
-
-      - name: count added files
-        if: steps.added_files.outputs.any_changed == 'false'
-        run: |
-          echo "::error::{No newsfragment added}"
-          exit 1
+        if: ! contains(github.event.pull_request.labels.*.name, 'no changelog')
+        run: towncrier check --compare-with origin/main
 
       - name: Print result
         run: echo "Newsfragment added"
