@@ -1,0 +1,30 @@
+name: newsfragment_checker
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetchdepth: 0
+
+      - name: get added newsfragments
+        id: added_files
+        uses: tj-actions/changed-files@v35
+        with:
+          files: changelog.d/**
+
+      - name: count added files
+        if: steps.added_files.outputs.any_changed == 'false'
+        run: |
+          echo "::error::{No newsfragment added}"
+          exit 1
+
+      - name: Print result
+        run: echo "Newsfragment added"
