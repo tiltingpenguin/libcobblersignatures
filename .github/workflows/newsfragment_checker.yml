@@ -15,8 +15,15 @@ jobs:
           cache: pip
       - run: pip install .[changelog]
 
+      - name: check for label
+        id: label-check
+        uses: egmacke/action-check-label@v1
+        with:
+          label: no changelog
+          fail_on_error: false
+
       - name: get added newsfragments
-        if: ! contains(github.event.pull_request.labels.*.name, 'no changelog')
+        if: (steps.label-check.outputs.* == false)
         run: towncrier check --compare-with origin/main
 
       - name: Print result
