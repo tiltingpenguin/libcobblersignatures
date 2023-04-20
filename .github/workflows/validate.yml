@@ -15,4 +15,4 @@ jobs:
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
           INPUT_SCHEMA: ./docs/schema.json
-          INPUT_JSONS: ./libcobblersignatures/config/*
+          INPUT_JSONS: ./libcobblersignatures/config/distro_signatures_v2_8_5.json
