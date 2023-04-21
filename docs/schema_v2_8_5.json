@@ -106,7 +106,7 @@
                 "kernel_file",
                 "initrd_file",
                 "isolinux_ok",
-                "default_autoinstall",
+                "default_kickstart",
                 "kernel_options",
                 "kernel_options_post",
                 "template_files",
