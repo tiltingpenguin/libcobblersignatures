@@ -111,12 +111,16 @@
                 "kernel_options_post",
                 "template_files",
                 "boot_files"
-              ]
+              ],
+              "additionalProperties": false
             }
-          }
+          },
+          "additionalProperties": false
         }
-      }
+      },
+      "additionalProperties": false
     }
   },
+  "additionalProperties": false,
   "required": ["breeds"]
 }
