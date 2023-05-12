@@ -51,8 +51,7 @@
                     "ppc64le",
                     "s390",
                     "s390x",
-                    "x86_64",
-                    "x86"
+                    "x86_64"
                   ]
                 },
                 "supported_repo_breeds": {
@@ -74,7 +73,7 @@
                   "description": "",
                   "type": "boolean"
                 },
-                "default_autoinstall": {
+                "default_kickstart": {
                   "description": "",
                   "type": "string"
                 },
@@ -96,45 +95,6 @@
                   "items": {
                     "type": "string"
                   }
-                },
-                "boot_loaders": {
-                  "description": "",
-                  "type": "object",
-                  "properties": {
-                    "arm": {
-                      "enum": ["pxe", "ipxe", "grub"]
-                    },
-                    "armhfp": {
-                      "enum": ["pxe", "ipxe", "grub"]
-                    },
-                    "aarch64": {
-                      "enum": ["pxe", "ipxe", "grub"]
-                    },
-                    "i386": {
-                      "enum": ["pxe", "ipxe", "grub"]
-                    },
-                    "ia64": {
-                      "enum": ["pxe", "ipxe", "grub"]
-                    },
-                    "ppc": {
-                      "enum": ["pxe", "ipxe", "grub"]
-                    },
-                    "ppc64": {
-                      "enum": ["pxe", "ipxe", "grub"]
-                    },
-                    "ppc64le": {
-                      "enum": ["pxe", "ipxe", "grub"]
-                    },
-                    "s390": {
-                      "enum": ["pxe", "ipxe", "grub"]
-                    },
-                    "s390x": {
-                      "enum": ["pxe", "ipxe", "grub"]
-                    },
-                    "x86_64": {
-                      "enum": ["pxe", "ipxe", "grub"]
-                    }
-                  }
                 }
               },
               "required": [
@@ -146,7 +106,7 @@
                 "kernel_file",
                 "initrd_file",
                 "isolinux_ok",
-                "default_autoinstall",
+                "default_kickstart",
                 "kernel_options",
                 "kernel_options_post",
                 "template_files",
